@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
+## JJ1GUJのページ
 
-You can use the [editor on GitHub](https://github.com/jj1guj/jj1guj.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+プログラミングとアマチュア無線が趣味の学生です
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
