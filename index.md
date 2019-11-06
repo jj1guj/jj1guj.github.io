@@ -3,8 +3,10 @@
 プログラミングとアマチュア無線が趣味の学生です
 
 ### プログラミング
+comming soon!  
 
 ### アマチュア無線
+comming soon!  
 
 
 <!--### Markdown
