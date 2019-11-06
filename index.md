@@ -2,10 +2,10 @@
 
 プログラミングとアマチュア無線が趣味の学生です
 
-###プログラミング
+### プログラミング
 ・オセロソフト
 
-###アマチュア無線
+### アマチュア無線
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
