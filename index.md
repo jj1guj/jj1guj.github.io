@@ -37,6 +37,6 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 -->
 
 ### Contact
-mail: jj1guj"AT"jarl.com ※"AT"を@に変えてください 
+mail: jj1guj"AT"jarl.com ※"AT"を@に変えてください  
 Twitter: @jj1guj
 <!--Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.-->
