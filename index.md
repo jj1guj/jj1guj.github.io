@@ -44,7 +44,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jj1guj/jj1guj.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 -->
 
-### Contact
+### Contact me
 mail: jj1guj\[AT\]jarl.com ※\[AT\]を@に変えてください  
 Twitter: [@jj1guj](https://twitter.com/jj1guj)
 <!--Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.-->
