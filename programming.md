@@ -7,7 +7,7 @@ GUIのお勉強を全くしてこなかったため、全てCUIです
 やっぱり時代はGUIだと身にしみて感じます  
 オセロソフトからSlackのボットまで色々作ってます  
 Twitterのボットも作りたいのですがAPIの登録がめんどくさい…  
-詳細は[こちら](https://jj1guj.github.io/programming_made.md)
+詳細は[こちら](https://jj1guj.github.io/programming_made)
 
 ### 競技プログラミング
 競技プログラミングとは与えられた問題を速く正確に解くプログラムを作り、制限時間に何問解くことができるか競技のことです  
