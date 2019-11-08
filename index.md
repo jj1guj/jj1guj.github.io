@@ -5,14 +5,14 @@
 
 ### プログラミング
 オセロソフトを作ったりAtCoderに出たりしています。 
-詳細は[こちら](https://jj1guj.github.io/programming)
+詳細は[こちら](https://jj1guj.github.io/programming/programming)
 
 ### アマチュア無線
 公共の電波の一部を使っていろいろな人とおしゃべりする趣味です。  
 頑張ると地球の裏側とも交信できます。  
 通常交信をしたり、コンテストに出たりしています  
-詳細は[こちら](https://jj1guj.github.io/hamradio)  
-コンテスト成績は[こちら](https://jj1guj.github.io/hamradio_contests)
+詳細は[こちら](https://jj1guj.github.io/hamradio/hamradio)  
+コンテスト成績は[こちら](https://jj1guj.github.io/hamradio/hamradio_contests)
 
 ### BCL
 BCLとは国内や海外のラジオ局に受信報告(あなたの放送局受信できたよ～という旨を報告すること)を送ってベリカードと呼ばれる絵はがきのようなものを集める趣味です。  
