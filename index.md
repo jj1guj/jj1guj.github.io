@@ -17,7 +17,9 @@
 ### BCL
 BCLとは国内や海外のラジオ局に受信報告(あなたの放送局受信できたよ～という旨を報告すること)を送ってベリカードと呼ばれる絵はがきのようなものを集める趣味です。  
 ・過去に集めたベリカードはこちら(近日中にあげます)
-
+### ブログ
+なんかもろもろつぶやく予定です  
+[こちら](https://jj1guj.github.io/blog)からご覧ください
 <!--### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
