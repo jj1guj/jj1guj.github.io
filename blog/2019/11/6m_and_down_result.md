@@ -1,6 +1,6 @@
 ## 6m&DOWNコンテスト結果発表
 今年7月に行われた6m&DOWNコンテストの結果が発表されました〜  
-結果は(こちら)[https://www.jarl.org/Japanese/1_Tanoshimo/1-1_Contest/6m/2019/index.html]です  
+結果は(こちら)[https://www.jarl.org/Japanese/1_Tanoshimo/1-1_Contest/6m/2019/index.html] です  
 今年は個人局として初めて参加しました  
 電話部門シングルオペニューカマーで埼玉県新座市(JCC 1330)からの参加となりました  
 最近体力を使うからと電話をあまりやらず、ずっとCWばっかりだったので体力が持つか心配でしたが、結果的にはなんとかなりました(遠い目)  
