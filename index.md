@@ -4,7 +4,7 @@
 ちょっと忙しいので落ち着いたら整備していきます
 
 ### プログラミング
-オセロソフトを作ったりAtCoderに出たりしています。 
+オセロソフトを作ったりAtCoderに出たりしています。  
 詳細は[こちら](https://jj1guj.github.io/programming/programming)
 
 ### アマチュア無線
