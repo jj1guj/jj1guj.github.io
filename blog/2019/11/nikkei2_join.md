@@ -1,4 +1,5 @@
 ## 第2回全国統一プログラミング王決定戦予選参加記
-日経コン参加しました〜  
-問題は[こちら](https://atcoder.jp/contests/nikkei2019-2-qual)  
-結果は[こちら]()
+[日経コン](https://atcoder.jp/contests/nikkei2019-2-qual)参加しました〜  
+コンテスト成績は[こちら]()
+まあ、爆死しました  
+A問題のみの1完でした  
