@@ -28,7 +28,7 @@
    また、イメージキャラも存在します  
    イメージキャラは音速の奇行子様よりいただきました  
    ありがとうございますorz  
-   コードはgithubに\(ry
+   Python版は[こちら](https://github.com/jj1guj/dekunobou-python)  
 #### Slackにひたすら気象情報を投下するボット
    サークルのSlackで毎日決まった時刻につくば市の3時間予報投下できたら便利そうだなぁと思って色々調べて作ってみました  
     Incoming Webhook, OpenWeathermapを使用し、Python3で実装しています  
