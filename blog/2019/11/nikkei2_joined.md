@@ -1,5 +1,5 @@
 ## 第2回全国統一プログラミング王決定戦予選参加記
-2019/11/10
+2019/11/10  
 [日経コン予選](https://atcoder.jp/contests/nikkei2019-2-qual)参加しました〜.  
 コンテスト成績は[こちら](https://atcoder.jp/users/jj1guj/history/share/nikkei2019-2-qual)  
 まあ、爆死しました.  
