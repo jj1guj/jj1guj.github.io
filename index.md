@@ -23,4 +23,4 @@ BCLとは国内や海外のラジオ局に受信報告(あなたの放送局受�
 
 ### Contact me
 mail: jj1guj\[AT\]jarl.com  ※ \[AT\]を@に変えてください  
-Twitter: [@jj1guj](https://twtter.com/jj1guj)
+Twitter: [@jj1guj](https://twitter.com/jj1guj)
