@@ -6,7 +6,7 @@
 ### プログラミング
 オセロソフトを作ったりAtCoderに出たりしています。  
 詳細は[こちら](https://jj1guj.github.io/programming/programming)  
-過去の作品は[こちら](https://github.com/jj1guj)にアップする予定ですので合わせてご覧ください  
+過去の作品は[こちら](https://github.com/jj1guj)に公開していますので合わせてご覧ください  
 
 ### アマチュア無線
 公共の電波の一部を使っていろいろな人とおしゃべりする趣味です。  
