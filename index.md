@@ -13,7 +13,8 @@
 頑張ると地球の裏側とも交信できます。  
 通常交信をしたり、コンテストに出たりしています  
 詳細は[こちら](https://jj1guj.github.io/hamradio/hamradio)  
-コンテスト成績は[こちら](https://jj1guj.github.io/hamradio/contests)
+コンテスト成績は[こちら](https://jj1guj.github.io/hamradio/contests)  
+QSLカード等の情報については[こちら](https://www.qrzcq.com/call/JJ1GUJ)にもあげています  
 
 ### BCL
 BCLとは国内や海外のラジオ局に受信報告(あなたの放送局受信できたよ～という旨を報告すること)を送ってベリカードと呼ばれる絵はがきのようなものを集める趣味です。  
