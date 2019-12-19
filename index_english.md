@@ -4,8 +4,8 @@ Japanese page is [here](https://jj1guj.github.io/)
 I'm a student like programming, amateur radio and BCL.  
 ### Programming
 I make othello software, join to Atcoder and so on.  
-Detail is [here (Japanese)](https://jj1guj.github.io/programming/programming)  
-My work is [here (Japanese)](https://github.com/jj1guj)  
+Detail is [here. (Japanese)](https://jj1guj.github.io/programming/programming)  
+My work is [here. (Japanese)](https://github.com/jj1guj)  
 
 ### Amateur Radio
 Amateur Radio is a hobby use radio wave and communicate with others.  
