@@ -19,8 +19,11 @@
 コンテスト成績は[こちら](https://jj1guj.github.io/hamradio/contests)をご覧ください
 
 ### QSLカードについて
+I send QSL Card by JARL bureau and [eqsl.cc](eqsl.cc).  
+It will take many time to send QSL Card because I don't my printer.  
+Tank you for your understanding.  
 QSLカードはJARLビューロ経由と[eQSL](eqsl.cc)で送付しています  
 プリンタがおうちにないのでQSLカードの発送はかなり先になりますがご了承願います  
-また、eQSLについても最近見れていないため、返送が遅くなります(基本的に送ってくださった局にはログを確認し、返送予定です)  
+[](また、eQSLについても最近見れていないため、返送が遅くなります(基本的に送ってくださった局にはログを確認し、返送予定です))  
 
  [ホーム](https://jj1guj.github.io)
