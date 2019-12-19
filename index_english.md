@@ -1,7 +1,7 @@
 ## JJ1GUJ's website
 
 Japanese page is [here](https://jj1guj.github.io/)  
-I'm a student likes programming, amateur radio and BCL.  
+I'm a student like programming, amateur radio and BCL.  
 ### Programming
 I make othello software, join to Atcoder and so on.  
 Detail is [here (Japanese)](https://jj1guj.github.io/programming/programming)  
