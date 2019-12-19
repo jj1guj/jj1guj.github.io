@@ -6,7 +6,7 @@
 
 
 ### 2019年
-<table>
+<table style="table-layout: fixed;">
 
   <tr>  
   <th>日付</th> <th>内容</th> <th>出場部門・種目</th> <th>結果</th> <th>備考</th>  
