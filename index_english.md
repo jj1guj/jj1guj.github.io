@@ -1,28 +1,27 @@
 ## JJ1GUJ's website
 
-I'm a student whose hobbies are programming, amateur and BCL.  
+Japanese page is [here](https://jj1guj.github.io/)  
+I'm a student likes programming, amateur radio and BCL.  
 ### Programming
 I make othello software, join to Atcoder and so on.  
 Detail is [here (Japanese)](https://jj1guj.github.io/programming/programming)  
-オセロソフトを作ったりAtCoderに出たりしています。  
-詳細は[こちら](https://jj1guj.github.io/programming/programming)  
-過去の作品は[こちら](https://github.com/jj1guj)に公開していますので合わせてご覧ください  
+My work is [here (Japanese)](https://github.com/jj1guj)  
 
 ### アマチュア無線
-公共の電波の一部を使っていろいろな人とおしゃべりする趣味です。  
-頑張ると地球の裏側とも交信できます。  
-通常交信をしたり、コンテストに出たりしています  
-詳細は[こちら](https://jj1guj.github.io/hamradio/hamradio)  
-コンテスト成績は[こちら](https://jj1guj.github.io/hamradio/contests)  
-QSLカード等の情報については[こちら](https://www.qrzcq.com/call/JJ1GUJ)にもあげています  
+Amateur Radio is a hobby use radio wave and communicate with others.  
+If you are lucky, you can communicate with someone who lives on the other side of the earth.  
+Sometimes, I entry conests.  
+QSL Card's information and othe detail are [here.](https://jj1guj.github.io/hamradio/hamradio)  
+My contest's standings are [here. (Japanese)](https://jj1guj.github.io/hamradio/contests)  
+QSL Card's information is written [here](https://www.qrzcq.com/call/JJ1GUJ), too.  
 
 ### BCL
-BCLとは国内や海外のラジオ局に受信報告(あなたの放送局受信できたよ～という旨を報告すること)を送ってベリカードと呼ばれる絵はがきのようなものを集める趣味です。  
-・過去に集めたベリカードはこちら(近日中にあげます)
+BCL is to send reception report (to report radio or TV station that I recieved your broadcast) and collect Verification Cards which like postcards.  
+Verification Cards I collected are here. (I'll up to date in few days)  
 ### ブログ
-なんかいろいろつぶやいてます  
-[こちら](https://jj1guj.hatenablog.com/)からご覧ください  
+I write various.  
+Read from [here! (Japanese)](https://jj1guj.hatenablog.com/)
 
 ### Contact me
-mail: jj1guj\[AT\]jarl.com  ※ \[AT\]を@に変えてください  
+mail: jj1guj\[AT\]jarl.com  ※ Please change \[AT\] to @  
 Twitter: [@jj1guj](https://twitter.com/jj1guj)
