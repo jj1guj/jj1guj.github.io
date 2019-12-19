@@ -1,5 +1,5 @@
 ## JJ1GUJのページ
-
+English page is [here](https://jj1guj.github.io/index_english)  
 プログラミング,アマチュア無線,BCLが趣味の学生です  
 ちょっと忙しいので落ち着いたら整備していきます
 
