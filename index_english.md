@@ -7,7 +7,7 @@ I make othello software, join to Atcoder and so on.
 Detail is [here (Japanese)](https://jj1guj.github.io/programming/programming)  
 My work is [here (Japanese)](https://github.com/jj1guj)  
 
-### アマチュア無線
+### Amateur Radio
 Amateur Radio is a hobby use radio wave and communicate with others.  
 If you are lucky, you can communicate with someone who lives on the other side of the earth.  
 Sometimes, I entry conests.  
@@ -18,7 +18,7 @@ QSL Card's information is written [here](https://www.qrzcq.com/call/JJ1GUJ), too
 ### BCL
 BCL is to send reception report (to report radio or TV station that I recieved your broadcast) and collect Verification Cards which like postcards.  
 Verification Cards I collected are here. (I'll up to date in few days)  
-### ブログ
+### Blog
 I write various.  
 Read from [here! (Japanese)](https://jj1guj.hatenablog.com/)
 
