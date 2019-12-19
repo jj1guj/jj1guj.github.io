@@ -1,3 +1,4 @@
+<link href="jj1guj.github.io/style.css" rel="stylesheet"></link>
 
 ## コンテスト成績
 ここでは、過去に自分のコールサイン\(JJ1GUJ\)で出場したコンテストの成績を紹介していきます  
