@@ -12,4 +12,5 @@
 #### K-mix
 受信日: 2016/4/5  
 受信地: 静岡県静岡市葵区  
-<img src="FM_image/2019-12-22%2000.29.30.png" width=50%>  
+![K-mix](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.29.30.png)
+<!-- <img src="FM_image/2019-12-22%2000.29.30.png" width=50%> -->  
