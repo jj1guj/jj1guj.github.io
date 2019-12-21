@@ -196,4 +196,11 @@
 ![FMうしくうれしく放送](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2001.02.22.png)  
 <br>
 
+#### FMかしま
+受信日: 2018/7/13  
+受信地: 茨城県土浦市  
+使用受信機: TECSUN PL-660  
+使用アンテナ: 内蔵ロッドアンテナ  
+![FMかしま](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2001.00.43.png)  
+<br>
  [ホーム](https://jj1guj.github.io)
