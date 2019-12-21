@@ -84,3 +84,10 @@
 使用アンテナ: 内蔵ロッドアンテナ  
 この頃は受験の現実逃避でずっと昼休みに遠距離受信をしていました  
 ![COAST-FM](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.42.16.png)
+
+#### FM西東京
+受信日: 2017/5/2  
+受信地: 埼玉県新座市  
+使用受信機: Audio Comm RAD-F6228M-K  
+使用アンテナ: 内蔵ロッドアンテナ  
+![COAST-FM](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.45.36.png)
