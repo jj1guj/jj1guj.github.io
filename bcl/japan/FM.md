@@ -2,7 +2,7 @@
 #### FM NACK5
 受信日: 2016/3/5  
 受信地: 群馬県利根郡みなかみ町  
-![FM NACK5](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-21%2023.59.55.png)  
+![FM_NACK5](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-21%2023.59.55.png)  
 
 #### FM-Hi
 受信日: 2016/4/2  
