@@ -7,7 +7,7 @@
 人生初ベリカードでした  
 ![FM_NACK5](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-21%2023.59.55.png)  
 
-#### FM-Hi
+#### FM-Hi! (シティエフエム静岡)
 受信日: 2016/4/2  
 受信地: 静岡県静岡市葵区  
 使用受信機: Audio Comm S-520N  
