@@ -90,4 +90,13 @@
 受信地: 埼玉県新座市  
 使用受信機: Audio Comm RAD-F6228M-K  
 使用アンテナ: 内蔵ロッドアンテナ  
-![COAST-FM](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.45.36.png)
+![FM西東京](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.45.36.png)
+
+#### REDS WAVE (City FM さいたま)
+受信日: 2017/5/3  
+受信地: 埼玉県新座市  
+使用受信機: Audio Comm RAD-F6228M-K  
+使用アンテナ: 内蔵ロッドアンテナ  
+浦和レッズめっちゃ推してますね(小並感)  
+![REDS WAVE](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.44.24.png)
+
