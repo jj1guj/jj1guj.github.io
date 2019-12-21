@@ -112,3 +112,11 @@
 浦和レッズめっちゃ推してますね(小並感)  
 ![REDS WAVE](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.44.24.png)  
 <br>
+
+#### FM世田谷
+受信日: 2017/5/3  
+受信地: 埼玉県新座市  
+使用受信機: Audio Comm RAD-F6228M-K  
+使用アンテナ: 内蔵ロッドアンテナ  
+![FM世田谷](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.44.56.png)  
+<br>
