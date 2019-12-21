@@ -154,13 +154,14 @@
 ![FM香川](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.56.24.png)  
 <br>
 
-#### FM802
-受信日: 2017/8/14  
-受信地: 岡山県美作市  
+#### FMHaro! (浜松エフエム放送)
+受信日: 2017/8/18  
+受信地: 静岡県湖西市新所原駅前  
 使用受信機: TECSUN PL-660  
 使用アンテナ: 内蔵ロッドアンテナ  
-このときばかりはここまで飛んでくるのかとびっくりしました  
-![FM802](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.56.00.png)  
+新所原駅は確かゆるキャン△でも出てましたね  
+駅に入ってるうなぎやさんでうな重食べたかった…  
+![FM802](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.58.24.png)  
 <br>
 
  [ホーム](https://jj1guj.github.io)
