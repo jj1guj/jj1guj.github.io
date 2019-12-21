@@ -18,7 +18,8 @@ QSLカード等の情報については[こちら](https://www.qrzcq.com/call/JJ
 
 ### BCL
 BCLとは国内や海外のラジオ局に受信報告(あなたの放送局受信できたよ～という旨を報告すること)を送ってベリカードと呼ばれる絵はがきのようなものを集める趣味です。  
-・過去に集めたベリカードはこちら(近日中にあげます)
+詳細は[こちら](https://jj1guj.github.io/bcl/bcl)  
+過去に集めたベリカードは[こちら](https://jj1guj.github.io/bcl/card_got)
 ### ブログ
 なんかいろいろつぶやいてます  
 [こちら](https://jj1guj.hatenablog.com/)からご覧ください  
