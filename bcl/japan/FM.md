@@ -68,3 +68,11 @@
 使用アンテナ: 内蔵ロッドアンテナ  
 この頃は受験の現実逃避でずっと昼休みに遠距離受信をしていました  
 ![FM yokohama](https://jj1guj.github.io/bcl/japan/FM_image/IMG_0526.jpg)
+
+#### TOKYO FM
+受信日: 2016/10/20  
+受信地: 静岡県静岡市葵区  
+使用受信機: Audio Comm RAD-F6228M-K  
+使用アンテナ: 内蔵ロッドアンテナ  
+この頃は受験の現実逃避でずっと昼休みに遠距離受信をしていました  
+![TOKYO FM](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.41.41.png)
