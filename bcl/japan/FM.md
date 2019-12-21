@@ -179,4 +179,13 @@
 使用アンテナ: 内蔵ロッドアンテナ  
 ![FMぐんま](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.59.20.png)  
 <br>
+
+#### FMぱるるん
+受信日: 2018/7/13  
+受信地: 茨城県土浦市  
+使用受信機: TECSUN PL-660  
+使用アンテナ: 内蔵ロッドアンテナ  
+![FMぱるるん](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2001.03.17.png)  
+<br>
+
  [ホーム](https://jj1guj.github.io)
