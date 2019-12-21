@@ -121,12 +121,46 @@
 ![FM世田谷](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.44.56.png)  
 <br>
 
+#### さくらFM
+受信日: 2017/8/9  
+受信地: 兵庫県神戸市中央区  
+使用受信機: TECSUN PL-660  
+使用アンテナ: 内蔵ロッドアンテナ  
+![Be Happy! 789](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.54.44.png)  
+<br>
+
 #### Be Happy! 789 (エフエム・キタ)
 受信日: 2017/8/10  
 受信地: 兵庫県神戸市中央区神戸空港  
 使用受信機: TECSUN PL-660  
 使用アンテナ: 内蔵ロッドアンテナ  
 ![Be Happy! 789](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.55.14.png)  
+<br>
+
+#### FM802
+受信日: 2017/8/14  
+受信地: 岡山県美作市  
+使用受信機: TECSUN PL-660  
+使用アンテナ: 内蔵ロッドアンテナ  
+![FM802](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.56.00.png)  
+<br>
+
+#### FM香川
+受信日: 2017/8/14  
+受信地: 岡山県美作市  
+使用受信機: TECSUN PL-660  
+使用アンテナ: 内蔵ロッドアンテナ  
+このときばかりはここまで飛んでくるのかとびっくりしました  
+![FM香川](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.56.24.png)  
+<br>
+
+#### FM802
+受信日: 2017/8/14  
+受信地: 岡山県美作市  
+使用受信機: TECSUN PL-660  
+使用アンテナ: 内蔵ロッドアンテナ  
+このときばかりはここまで飛んでくるのかとびっくりしました  
+![FM802](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.56.00.png)  
 <br>
 
  [ホーム](https://jj1guj.github.io)
