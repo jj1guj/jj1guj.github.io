@@ -121,4 +121,12 @@
 ![FM世田谷](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.44.56.png)  
 <br>
 
+#### Be Happy! 789 (エフエム・キタ)
+受信日: 2017/8/10  
+受信地: 兵庫県神戸市中央区神戸空港  
+使用受信機: TECSUN PL-660  
+使用アンテナ: 内蔵ロッドアンテナ  
+![Be Happy! 789](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.55.14.png)  
+<br>
+
  [ホーム](https://jj1guj.github.io)
