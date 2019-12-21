@@ -27,4 +27,4 @@
 使用受信機: Audio Comm S-520N  
 使用アンテナ: 内蔵ロッドアンテナ  
 人生初Eスポ受信でした  
-![FM沖縄](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.34.59)
+![FM沖縄](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.34.59.png)
