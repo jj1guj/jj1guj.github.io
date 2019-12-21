@@ -161,7 +161,7 @@
 使用アンテナ: 内蔵ロッドアンテナ  
 新所原駅は確かゆるキャン△でも出てましたね  
 駅に入ってるうなぎやさんでうな重食べたかった…  
-![FM802](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.58.24.png)  
+![FMHaro!](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.58.24.png)  
 <br>
 
 #### エフエムしみず
@@ -169,6 +169,14 @@
 受信地: 静岡県静岡市葵区  
 使用受信機: TECSUN PL-660  
 使用アンテナ: 内蔵ロッドアンテナ  
-![FM802](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.58.00.png)  
+![エフエムしみず](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.58.00.png)  
+<br>
+
+#### FMぐんま
+受信日: 2018/3/29  
+受信地: 茨城県つくば市  
+使用受信機: TECSUN PL-660  
+使用アンテナ: 内蔵ロッドアンテナ  
+![FMぐんま](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.59.20.png)  
 <br>
  [ホーム](https://jj1guj.github.io)
