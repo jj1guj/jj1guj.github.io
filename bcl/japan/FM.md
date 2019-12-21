@@ -164,13 +164,13 @@
 ![FMHaro!](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.58.24.png)  
 <br>
 
-<!-- #### エフエムしみず
+#### エフエムしみず
 受信日: 2017/8/21  
 受信地: 静岡県静岡市葵区  
 使用受信機: TECSUN PL-660  
 使用アンテナ: 内蔵ロッドアンテナ  
-![エフエムしみず](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.58.00.png)  
-<br> -->
+![エフエムしみず](https://jj1guj.github.io/bcl/japan/FM_image/Inked2019-12-22%2000.58.00_LI.jpg)  
+<br>
 
 #### FMぐんま
 受信日: 2018/3/29  
