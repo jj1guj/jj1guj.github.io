@@ -28,3 +28,11 @@
 使用アンテナ: 内蔵ロッドアンテナ  
 人生初Eスポ受信でした  
 ![FM沖縄](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.34.59.png)
+
+#### VOICE CUE (FMみしま・かんなみ)
+受信日: 2016/6/9  
+受信地: 静岡県静岡市葵区  
+使用受信機: Audio Comm RAD-F6228M-K  
+使用アンテナ: 内蔵ロッドアンテナ  
+この頃は受験の現実逃避でずっと昼休みに遠距離受信をしていました  
+![VOICECUE](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2000.36.45.png)
