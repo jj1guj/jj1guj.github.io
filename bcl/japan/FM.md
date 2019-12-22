@@ -217,6 +217,6 @@
 受信地: 茨城県つくば市筑波山 女体山山頂  
 使用受信機: TECSUN PL-660  
 使用アンテナ: 内蔵ロッドアンテナ  
-![FM川口](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2001.01.55.png)  
+![FM川口](https://jj1guj.github.io/bcl/japan/FM_image/Inked2019-12-2201.01.55_LI.jpg)  
 <br>
  [ホーム](https://jj1guj.github.io)
