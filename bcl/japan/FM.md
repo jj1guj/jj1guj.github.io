@@ -203,4 +203,20 @@
 使用アンテナ: 内蔵ロッドアンテナ  
 ![FMかしま](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2001.00.43.png)  
 <br>
+
+#### かわさきFM
+受信日: 2018/7/20  
+受信地: 茨城県つくば市筑波山 女体山山頂  
+使用受信機: TECSUN PL-660  
+使用アンテナ: 内蔵ロッドアンテナ  
+![かわさきFM](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2001.02.57.png)  
+<br>
+
+#### FM Kawaguchi 856 Studio (FM川口)
+受信日: 2018/7/20  
+受信地: 茨城県つくば市筑波山 女体山山頂  
+使用受信機: TECSUN PL-660  
+使用アンテナ: 内蔵ロッドアンテナ  
+![FM川口](https://jj1guj.github.io/bcl/japan/FM_image/2019-12-22%2001.01.55.png)  
+<br>
  [ホーム](https://jj1guj.github.io)
