@@ -21,7 +21,7 @@ BCLとは国内や海外のラジオ局に受信報告(あなたの放送局受�
 詳細は[こちら](https://jj1guj.github.io/bcl/bcl)  
 過去に集めたベリカードは[こちら](https://jj1guj.github.io/bcl/card_got)
 ### ブログ
-なんかいろいろつぶやいてます  
+なんかいろいろつぶやいたりいなかったりてます  
 [こちら](https://jj1guj.hatenablog.com/)からご覧ください  
 
 ### Contact me
