@@ -5,7 +5,7 @@
   時短するつもりが逆に時間がかかってしまい、班のメンバーに迷惑をかけております…  
   また、CUIなので使い勝手が良くないです  
   GUIできるようになりたい\(切実\)  
-  コード・実行ファイルは[こちら](https://github.com/jj1guj/applied_labaratory_make_route/tree/ver3.0)  
+  コード・実行ファイルは[こちら](https://github.com/jj1guj/applied_labaratory_make_route/tree/ver3.1)  
 #### 五目並べソフト  
   現在進行系で将棋ソフトを作りたいのですが、そこまでの技術力がないため、技術力向上のために1年生の頃に作りました  
   最初VBAで組んだものを当時お勉強していたPython3に移植したものです  
