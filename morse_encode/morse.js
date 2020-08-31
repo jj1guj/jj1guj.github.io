@@ -100,7 +100,12 @@ function alphabet_to_morse(){
         "す":"---.-",
         "ん":".-.-.",
         "゛":"..",
-        "゜":"..--."
+        "゜":"..--.",
+        "ー":".--.-",
+        "、":".-.-.-",
+        "」":".-.-..",
+        "（":"-.--.-",
+        "）":".-..-."
     };
 
     var toSeion={
@@ -130,6 +135,19 @@ function alphabet_to_morse(){
         "ぺ":"へ゜",
         "ぽ":"ほ゜"
     };
+
+    var toOmoji={
+        "ぁ":"あ",
+        "ぃ":"い",
+        "ぅ":"う",
+        "ぇ":"え",
+        "ぉ":"お",
+        "っ":"つ",
+        "ゃ":"や",
+        "ゅ":"ゆ",
+        "ょ":"よ",
+        "ゎ":"わ"
+    };
     
     var str_in=document.getElementById("input_message").value;
     var str_out="";
@@ -140,6 +158,8 @@ function alphabet_to_morse(){
         }else if(toSeion[str_in.substr(i,1)]){
             str_out+=toMorse[toSeion[str_in.substr(i,1)].substr(0,1)]+" "+
                     toMorse[toSeion[str_in.substr(i,1)].substr(1,1)]+" ";
+        }else if(toOmoji[str_in.substr(i,1)]){
+            str_out+=toMorse[toOmoji[str_in.substr(i,1)]]+" ";
         }else{
             str_out+=" ";
         }
