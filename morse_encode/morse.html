@@ -8,10 +8,13 @@
         <script src="./morse.js"></script>
         現状半角英数字とひらがなのみに対応しています. それ以外の文字を入力すると空白が表示されます.<br>
         使える記号: ".", ",", ":", "?", "_", "+", "-", "×"(乗算記号), "^", "/", "@", "(", ")", "(ダブルクオーテーション), '(シングルクォーテーション)<br>
+        <br>入力(平文)
         <form id="form1" action="#">
             <textarea id="input_message" name="message" cols="40" rows="10"></textarea> 
         </form>
-        <input type="button" onclick="alphabet_to_morse()" value="エンコード">
-        <div id="output_message"></div>
+        <input type="button" onclick="alphabet_to_morse()" value="エンコード"><br><br>
+        エンコード結果<br>
+        <textarea id="output_message" name="message" cols="40" rows="10" readonly></textarea> 
+        <!--<div id="output_message"></div>-->
     </body>
 </html>
