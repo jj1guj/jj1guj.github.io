@@ -3128,3 +3128,24 @@ input, select, textarea {
   font-size: 1.4em;
   line-height: 1.35;
 }
+.markdown-body table tr {
+  border-top: solid 2px #E7EAE8;
+}
+
+.markdown-body table td {
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+.markdown-body table th {
+  text-align: left;
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 0 0 1em 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  color: #6b7770;
+}
+
+.markdown-body table thead {
+  background: #E7EAE8;
+  color: #fff;
+}
