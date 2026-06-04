@@ -1,6 +1,6 @@
 ---
 layout: default
-title: モールス符号に変換するやつ - JJ1GUJ's page
+title: モールス符号に変換するやつ
 permalink: /morse_encode/morse.html
 ---
 

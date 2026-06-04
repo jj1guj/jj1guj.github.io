@@ -1,6 +1,7 @@
 ---
 layout: default
-title: English - JJ1GUJ's page
+title: English
+lang: en
 permalink: /english.html
 ---
 

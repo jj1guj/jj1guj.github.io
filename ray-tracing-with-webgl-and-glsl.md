@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ray-tracing-with-webgl-and-glsl - JJ1GUJのページ
+title: ray-tracing-with-webgl-and-glsl
 permalink: /ray-tracing-with-webgl-and-glsl.html
 ---
 

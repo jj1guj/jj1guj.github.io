@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contact - JJ1GUJのページ
+title: Contact
 permalink: /contact.html
 ---
 

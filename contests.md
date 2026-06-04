@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contests - JJ1GUJのページ
+title: Contests
 permalink: /contests.html
 ---
 

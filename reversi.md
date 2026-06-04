@@ -1,6 +1,6 @@
 ---
 layout: default
-title: オセロ - JJ1GUJのページ
+title: オセロ
 permalink: /reversi.html
 ---
 

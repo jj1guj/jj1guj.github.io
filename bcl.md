@@ -1,6 +1,6 @@
 ---
 layout: default
-title: BCL - JJ1GUJのページ
+title: BCL
 permalink: /bcl.html
 ---
 

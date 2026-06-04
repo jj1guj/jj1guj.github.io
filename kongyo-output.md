@@ -1,6 +1,6 @@
 ---
 layout: default
-title: kongyo-output - JJ1GUJのページ
+title: kongyo-output
 permalink: /kongyo-output.html
 ---
 
