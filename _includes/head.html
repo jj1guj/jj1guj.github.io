@@ -1,4 +1,14 @@
-<title>{% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+{% assign site_name = site.title %}
+{% if page.lang == 'en' and site.english_title %}
+{% assign site_name = site.english_title %}
+{% endif %}
+<title>
+{% if page.title %}
+{{ page.title | escape }} | {{ site_name | escape }}
+{% else %}
+{{ site_name | escape }}
+{% endif %}
+</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="/assets/css/main.css" />
