@@ -3150,3 +3150,17 @@ input, select, textarea {
   background: #E7EAE8;
   color: #fff;
 }
+
+/* index.md (ホーム) の本文だけ行間と余白を調整 */
+body.homepage #main .markdown-body {
+  line-height: 1.6;
+}
+
+body.homepage #main .markdown-body p {
+  margin: 0 0 0.9em 0;
+}
+
+body.homepage #main .markdown-body h3 {
+  margin: 0 0 0.25em 0;
+  line-height: 1.25;
+}

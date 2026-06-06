@@ -1,0 +1,12 @@
+- title: Works
+  href: works.html
+  image: images/pic02.jpg
+  body: 今まで作成した主な作品を紹介しています.
+- title: アマチュア無線
+  href: hamradio.html
+  image: images/pic02.jpg
+  body: 公共の電波の一部を使っていろいろな人とおしゃべりする趣味です. 頑張ると地球の裏側とも交信できます. 通常交信をしたり, コンテストに出たりしています.
+- title: Blog
+  href: https://jj1guj.hatenablog.com/
+  image: images/pic02.jpg
+  body: はてなブログで主にAtCoder参加記事を書いてます. たまに自分でなにか作った話とか書きます. (クリックするとブログページに飛びます)
