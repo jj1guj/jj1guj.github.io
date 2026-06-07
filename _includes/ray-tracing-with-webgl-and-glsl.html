@@ -1,5 +1,9 @@
 <script id="f" type="x/f">
+  #ifdef GL_FRAGMENT_PRECISION_HIGH
+  precision highp float;
+  #else
   precision mediump float;
+  #endif
   uniform float t;
   uniform vec2  r;
 
@@ -257,6 +261,9 @@
       C,
       I,
       U,
+      W,
+      H,
+      Q,
       k,
       E,
       B,
@@ -273,8 +280,15 @@
         function () {
           function handleResize() {
             var rect = a.parentElement.getBoundingClientRect();
-            a.width = I = Math.max(1, Math.floor(rect.width));
-            a.height = U = Math.max(1, Math.floor(rect.height));
+              W = Math.max(1, Math.floor(rect.width));
+              H = Math.max(1, Math.floor(rect.height));
+              Q = Math.min(window.devicePixelRatio || 1, 2.0);
+              I = Math.max(1, Math.floor(W * Q));
+              U = Math.max(1, Math.floor(H * Q));
+              a.width = I;
+              a.height = U;
+              a.style.width = W + "px";
+              a.style.height = H + "px";
             // テクスチャサイズの再計算
             for (k = D = 1; k < Math.max(I, U); ) k = Math.pow(2, ++D);
 
@@ -318,8 +332,15 @@
             (F = i.bindTexture),
             (function () {
               var rect = a.parentElement.getBoundingClientRect();
-              a.width = I = Math.max(1, Math.floor(rect.width));
-              a.height = U = Math.max(1, Math.floor(rect.height));
+              W = Math.max(1, Math.floor(rect.width));
+              H = Math.max(1, Math.floor(rect.height));
+              Q = Math.min(window.devicePixelRatio || 1, 2.0);
+              I = Math.max(1, Math.floor(W * Q));
+              U = Math.max(1, Math.floor(H * Q));
+              a.width = I;
+              a.height = U;
+              a.style.width = W + "px";
+              a.style.height = H + "px";
             })(),
             (function () {
               for (k = D = 1; k < Math.max(I, U); ) k = Math.pow(2, ++D);
