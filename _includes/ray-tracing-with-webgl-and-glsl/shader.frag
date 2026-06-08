@@ -126,7 +126,29 @@
   // ============================================================
   // [6] ray_color 関数
   // ============================================================
-  // TODO: main から分離予定
+  vec3 ray_color(Ray ray){
+	Intersection its;
+	intersectInit(its);
+
+	vec3 destColor = vec3(ray.direction.y);
+	vec3 tempColor = vec3(1.0);
+	Ray q;
+	intersectExec(ray, its);
+	if (its.hit > 0){
+		destColor = its.color;
+		tempColor *= its.color;
+		for(int j = 1; j < MAX_REF; j++){
+			q.origin = its.hitPoint + its.normal * EPS;
+			q.direction = reflect(its.rayDir, its.normal);
+			intersectExec(q, its);
+			if (its.hit > j){
+				destColor += tempColor * its.color;
+				tempColor *= its.color;
+			}
+		}
+	}
+	return destColor;
+  }
 
   // ============================================================
   // [7] main (カメラ設定, シーン構築, 出力)
@@ -159,28 +181,5 @@
 	plane.normal = vec3(0.0, 1.0, 0.0);
 	plane.color = vec3(1.0);
 
-	// intersection init
-	Intersection its;
-	intersectInit(its);
-
-	// hit check
-	vec3 destColor = vec3(ray.direction.y);
-	vec3 tempColor = vec3(1.0);
-	Ray q;
-	intersectExec(ray, its);
-	if (its.hit > 0){
-		destColor = its.color;
-		tempColor *= its.color;
-		for(int j = 1; j < MAX_REF; j++){
-			q.origin = its.hitPoint + its.normal * EPS;
-			q.direction = reflect(its.rayDir, its.normal);
-			intersectExec(q, its);
-			if (its.hit > j){
-				destColor += tempColor * its.color;
-				tempColor *= its.color;
-			}
-		}
-	}
-
-	gl_FragColor = vec4(destColor, 1.0);
+	gl_FragColor = vec4(ray_color(ray), 1.0);
   }
