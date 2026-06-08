@@ -107,13 +107,13 @@
 	// sphere init
 	sphere[0].radius = 0.5;
 	sphere[0].position = vec3(0.0, -0.5, sin(t));
-	sphere[0].color = vec3(1.0, 0.0, 0.0);
+	sphere[0].color = vec3(1.0, 1.0, 0.0);
 	sphere[1].radius = 1.0;
 	sphere[1].position = vec3(2.0, 0.0, cos(t * 0.666));
 	sphere[1].color = vec3(0.0, 1.0, 0.0);
 	sphere[2].radius = 1.5;
 	sphere[2].position = vec3(-2.0, 0.5, cos(t * 0.333));
-	sphere[2].color = vec3(0.0, 0.0, 1.0);
+	sphere[2].color = vec3(1.0, 1.0, 1.0);
 
 	// plane init
 	plane.position = vec3(0.0, -1.0, 0.0);
