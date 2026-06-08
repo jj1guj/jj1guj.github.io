@@ -49,7 +49,16 @@
   // ============================================================
   // [3] 疑似乱数関数
   // ============================================================
-  // TODO: Step 1 で実装
+  vec2 randSeed;
+
+  float random() {
+	randSeed += vec2(1.0, -1.0);
+	return fract(sin(dot(randSeed, vec2(12.9898, 78.233))) * 43758.5453);
+  }
+
+  float random(float min_val, float max_val) {
+	return min_val + (max_val - min_val) * random();
+  }
 
   // ============================================================
   // [4] マテリアル散乱関数
@@ -125,6 +134,9 @@
   void main(void){
 	// fragment position
 	vec2 p = (gl_FragCoord.xy * 2.0 - r) / min(r.x, r.y);
+
+	// random seed init
+	randSeed = gl_FragCoord.xy + vec2(t);
 
 	// ray init
 	Ray ray;
