@@ -199,5 +199,6 @@
 	plane.normal = vec3(0.0, 1.0, 0.0);
 	plane.color = vec3(1.0);
 
-	gl_FragColor = vec4(ray_color(ray), 1.0);
+	vec3 col = ray_color(ray);
+	gl_FragColor = vec4(sqrt(col), 1.0);
   }
