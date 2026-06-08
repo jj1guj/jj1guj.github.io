@@ -1,11 +1,22 @@
+    // ============================================================
+  // [1] precision / uniforms / constants
+  // ============================================================
   #ifdef GL_FRAGMENT_PRECISION_HIGH
   precision highp float;
   #else
   precision mediump float;
   #endif
+
   uniform float t;
   uniform vec2  r;
 
+  const vec3 LDR = vec3(0.577);
+  const float EPS = 1.0e-4;
+  const int MAX_REF = 4;
+
+  // ============================================================
+  // [2] 構造体定義
+  // ============================================================
   struct Ray{
 	vec3 origin;
 	vec3 direction;
@@ -26,19 +37,28 @@
   struct Intersection{
 	int hit;
 	vec3 hitPoint; // 交点の座標
-	vec3 normal; // 交点位置の法線
-	vec3 color; // 交点位置の色
+	vec3 normal;   // 交点位置の法線
+	vec3 color;    // 交点位置の色
 	float distance;
 	vec3 rayDir;
   };
 
-  const vec3 LDR = vec3(0.577);
-  const float EPS = 1.0e-4;
-  const int MAX_REF = 4;
-
   Sphere sphere[3];
   Plane plane;
 
+  // ============================================================
+  // [3] 疑似乱数関数
+  // ============================================================
+  // TODO: Step 1 で実装
+
+  // ============================================================
+  // [4] マテリアル散乱関数
+  // ============================================================
+  // TODO: Step 2〜6 で実装
+
+  // ============================================================
+  // [5] 交差判定関数
+  // ============================================================
   void intersectInit(inout Intersection I){
 	I.hit      = 0;
 	I.hitPoint = vec3(0.0);
@@ -87,7 +107,6 @@
 	}
   }
 
-
   void intersectExec(Ray R, inout Intersection I){
 	intersectSphere(R, sphere[0], I);
 	intersectSphere(R, sphere[1], I);
@@ -95,6 +114,14 @@
 	intersectPlane(R, plane, I);
   }
 
+  // ============================================================
+  // [6] ray_color 関数
+  // ============================================================
+  // TODO: main から分離予定
+
+  // ============================================================
+  // [7] main (カメラ設定, シーン構築, 出力)
+  // ============================================================
   void main(void){
 	// fragment position
 	vec2 p = (gl_FragCoord.xy * 2.0 - r) / min(r.x, r.y);
