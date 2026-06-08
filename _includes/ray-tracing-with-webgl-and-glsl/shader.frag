@@ -14,6 +14,8 @@
   const float EPS = 1.0e-4;
   const int MAX_REF = 50;
 
+  const float pi = acos(-1.0);
+
   // ============================================================
   // [2] 構造体定義
   // ============================================================
@@ -72,14 +74,11 @@
 	);
   }
 
-  vec3 random_in_unit_sphere() {
-	// GLSLでは無限ループは怒られるので有限回にしている
-	// 100回やっとけばまず失敗しない
-	for(int i = 0; i < 100; i++) {
-		vec3 p = random_vec3(-1.0, 1.0);
-		if (dot(p, p) >= 1.0) continue;
-		return p;
-	}
+  vec3 random_in_unit_vector() {
+	float a = random(0.0, 2.0 * pi);
+	float z = random(-1.0, 1.0);
+	float r = sqrt(1.0 - z * z);
+	return vec3(r * cos(a), r * sin(a), z);
   }
 
   // ============================================================
@@ -158,7 +157,7 @@
 		if (its.hit > 0) {
 			tempColor *= 0.5;
 			ray.origin = its.hitPoint + its.normal * EPS;
-			ray.direction = its.normal + random_in_unit_sphere();
+			ray.direction = its.normal + random_in_unit_vector();
 		} else {
 			vec3 unit_direction = normalize(ray.direction);
 			float t = 0.5 * (unit_direction.y + 1.0);
