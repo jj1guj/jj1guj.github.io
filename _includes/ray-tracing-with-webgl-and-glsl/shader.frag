@@ -12,7 +12,7 @@
 
   const vec3 LDR = vec3(0.577);
   const float EPS = 1.0e-4;
-  const int MAX_REF = 4;
+  const int MAX_REF = 50;
 
   // ============================================================
   // [2] 構造体定義
@@ -58,6 +58,28 @@
 
   float random(float min_val, float max_val) {
 	return min_val + (max_val - min_val) * random();
+  }
+
+  vec3 random_vec3() {
+	return vec3(random(), random(), random());
+  }
+
+  vec3 random_vec3(float min_val, float max_val) {
+	return vec3(
+		random(min_val, max_val),
+		random(min_val, max_val),
+		random(min_val, max_val)
+	);
+  }
+
+  vec3 random_in_unit_sphere() {
+	// GLSLでは無限ループは怒られるので有限回にしている
+	// 100回やっとけばまず失敗しない
+	for(int i = 0; i < 100; i++) {
+		vec3 p = random_vec3(-1.0, 1.0);
+		if (dot(p, p) >= 1.0) continue;
+		return p;
+	}
   }
 
   // ============================================================
@@ -128,26 +150,22 @@
   // ============================================================
   vec3 ray_color(Ray ray){
 	Intersection its;
-	intersectInit(its);
 
-	vec3 destColor = vec3(ray.direction.y);
 	vec3 tempColor = vec3(1.0);
-	Ray q;
-	intersectExec(ray, its);
-	if (its.hit > 0){
-		destColor = its.color;
-		tempColor *= its.color;
-		for(int j = 1; j < MAX_REF; j++){
-			q.origin = its.hitPoint + its.normal * EPS;
-			q.direction = reflect(its.rayDir, its.normal);
-			intersectExec(q, its);
-			if (its.hit > j){
-				destColor += tempColor * its.color;
-				tempColor *= its.color;
-			}
+	for (int i = 0; i < MAX_REF; i++) {
+		intersectInit(its);
+		intersectExec(ray, its);
+		if (its.hit > 0) {
+			tempColor *= 0.5;
+			ray.origin = its.hitPoint + its.normal * EPS;
+			ray.direction = its.normal + random_in_unit_sphere();
+		} else {
+			vec3 unit_direction = normalize(ray.direction);
+			float t = 0.5 * (unit_direction.y + 1.0);
+			return (1.0 - t) * vec3(1.0) + t * vec3(0.5, 0.7, 1.0);
 		}
 	}
-	return destColor;
+	return vec3(0.0);
   }
 
   // ============================================================
