@@ -25,7 +25,8 @@
 
   const vec3 LDR = vec3(0.577);
   const float EPS = 1.0e-4;
-  const int MAX_REF = 50;
+  const int SAMPLES_PER_PIXEL = 20;
+  const int MAX_REF = 4;
 
   const float pi = acos(-1.0);
 
@@ -80,8 +81,10 @@
   vec2 randSeed;
 
   float random() {
-	randSeed += vec2(1.0, -1.0);
-	return fract(sin(dot(randSeed, vec2(12.9898, 78.233))) * 43758.5453);
+    randSeed += vec2(0.6180339887, 0.3819660113);
+    vec3 p3 = fract(vec3(randSeed.xyx) * 0.1031);
+    p3 += dot(p3, p3.yzx + 33.33);
+    return fract((p3.x + p3.y) * p3.z);
   }
 
   float random(float min_val, float max_val) {
@@ -105,6 +108,10 @@
 	float z = random(-1.0, 1.0);
 	float r = sqrt(1.0 - z * z);
 	return vec3(r * cos(a), r * sin(a), z);
+  }
+
+  vec2 sample_square() {
+	return vec2(random() - 0.5, random() - 0.5);
   }
 
   // ============================================================
@@ -228,17 +235,20 @@
 
 	// sphere init
 	sphere[0].radius = 0.5;
-	sphere[0].position = vec3(0.0, -0.5, sin(t));
+	// sphere[0].position = vec3(0.0, -0.5, sin(t));
+	sphere[0].position = vec3(0.0, -0.5, -1.0);
 	sphere[0].color = vec3(1.0, 1.0, 0.0);
 	sphere[0].material.type = MAT_METAL;
 	sphere[0].material.albedo = sphere[0].color;
 	sphere[1].radius = 1.0;
-	sphere[1].position = vec3(2.0, 0.0, cos(t * 0.666));
+	// sphere[1].position = vec3(2.0, 0.0, cos(t * 0.666));
+	sphere[1].position = vec3(2.0, 0.0, 0.0);
 	sphere[1].color = vec3(0.0, 1.0, 0.0);
 	sphere[1].material.type = MAT_METAL;
 	sphere[1].material.albedo = sphere[1].color;
 	sphere[2].radius = 1.5;
-	sphere[2].position = vec3(-2.0, 0.5, cos(t * 0.333));
+	// sphere[2].position = vec3(-2.0, 0.5, cos(t * 0.333));
+	sphere[2].position = vec3(-2.0, 0.5, 1.0);
 	sphere[2].color = vec3(0.5137, 0.4941, 0.4941);
 	sphere[2].material.type = MAT_METAL;
 	sphere[2].material.albedo = sphere[2].color;
@@ -249,6 +259,11 @@
 	plane.color = vec3(0.5);
 	plane.material.albedo = plane.color;
 
-	vec3 col = ray_color(ray);
+	vec3 col = vec3(0.0);
+	for (int sample = 0; sample < SAMPLES_PER_PIXEL; sample++) {
+		vec2 offset = sample_square() / min(r.x, r.y);
+		ray.direction = normalize(vec3(p + offset, -1.0));
+		col += ray_color(ray) / float(SAMPLES_PER_PIXEL);
+	}
 	gl_FragColor = vec4(sqrt(col), 1.0);
   }

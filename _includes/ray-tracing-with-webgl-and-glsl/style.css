@@ -1,6 +1,6 @@
   #rt-wrap {
     width: 100%;
-    max-width: 3840px;
+    max-width: 960px;
     aspect-ratio: 16 / 9;
     margin: 0 auto;
     overflow: hidden;
