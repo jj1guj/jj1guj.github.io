@@ -33,6 +33,7 @@
   // マテリアルの種類
   const int MAT_LAMBERTIAN = 0;
   const int MAT_METAL = 1;
+  const int MAT_DIELECTRIC = 2;
 
   // ============================================================
   // [2] 構造体定義
@@ -43,9 +44,9 @@
   };
 
   struct Material{
-	// TODO: マテリアルの種類の情報を持たせる
 	int type;
-	float fuzz;
+	float fuzz; // 金属マテリアルにおける反射時のぼやけの強さ
+	float ref_idx; // 誘電体マテリアルの屈折率
 	vec3 albedo;
   };
 
@@ -126,6 +127,26 @@
 		ray.direction = reflected + I.material.fuzz * random_in_unit_vector();
 		albedo = I.material.albedo;
 		return (dot(ray.direction, I.normal) > 0.0);
+	} else if (I.material.type == MAT_DIELECTRIC) {
+		// 誘電体マテリアル
+		float etai_over_etat;
+		if (dot(I.rayDir, I.normal) < 0.0) {
+			// 物体の外から入る
+			etai_over_etat = 1.0 / I.material.ref_idx;
+
+			vec3 refracted = refract(normalize(I.rayDir), I.normal, etai_over_etat);
+			ray.origin = I.hitPoint - I.normal * EPS;
+			ray.direction = refracted;
+		} else {
+			etai_over_etat = I.material.ref_idx;
+
+			vec3 refracted = refract(normalize(I.rayDir), -I.normal, etai_over_etat);
+			ray.origin = I.hitPoint + I.normal * EPS;
+			ray.direction = refracted;
+		}
+
+		albedo = vec3(1.0);
+		return true;
 	} else {
 		// Lambertian散乱
 		vec3 scatter_direction = I.normal + random_in_unit_vector();
@@ -256,7 +277,7 @@
 	sphere[2].color = vec3(0.5137, 0.4941, 0.4941);
 	sphere[2].material.type = MAT_METAL;
 	sphere[2].material.albedo = sphere[2].color;
-	sphere[2].material.fuzz = 1.0;
+	sphere[2].material.ref_idx = 1.5;
 
 	// plane init
 	plane.position = vec3(0.0, -1.0, 0.0);
