@@ -119,6 +119,12 @@
   // ============================================================
   // [4] マテリアル散乱関数
   // ============================================================
+  float schlick(float cosine, float ref_idx) {
+	float r0 = (1.0 - ref_idx) / (1.0 + ref_idx);
+	r0 = r0 * r0;
+	return r0 + (1.0 - r0) * pow(1.0 - cosine, 5.0);
+  }
+
   bool scatter(Intersection I, inout vec3 albedo, inout Ray ray) {
 	if (I.material.type == MAT_METAL) {
 		// 金属マテリアル
@@ -146,6 +152,16 @@
 		if (etai_over_etat * sin_theta > 1.0) {
 			// 全反射
 			vec3 reflected = reflect(I.rayDir, normal);
+			ray.origin = I.hitPoint + normal * EPS;
+			ray.direction = reflected;
+
+			albedo = vec3(1.0);
+			return true;
+		}
+
+		float reflect_prob = schlick(cos_theta, etai_over_etat);
+		if (random() < reflect_prob) {
+			vec3 reflected = reflect(unit_direction, normal);
 			ray.origin = I.hitPoint + normal * EPS;
 			ray.direction = reflected;
 
