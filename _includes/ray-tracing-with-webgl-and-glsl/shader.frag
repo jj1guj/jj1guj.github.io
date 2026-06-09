@@ -29,6 +29,10 @@
 
   const float pi = acos(-1.0);
 
+  // マテリアルの種類
+  const int MAT_LAMBERTIAN = 0;
+  const int MAT_METAL = 1;
+
   // ============================================================
   // [2] 構造体定義
   // ============================================================
@@ -39,6 +43,7 @@
 
   struct Material{
 	// TODO: マテリアルの種類の情報を持たせる
+	int type;
 	vec3 albedo;
   };
 
@@ -106,11 +111,21 @@
   // [4] マテリアル散乱関数
   // ============================================================
   bool scatter(Intersection I, inout vec3 albedo, inout Ray ray) {
-	vec3 scatter_direction = I.normal + random_in_unit_vector();
-	ray.origin = I.hitPoint + I.normal * EPS;
-	ray.direction = scatter_direction;
-	albedo = I.material.albedo;
-	return true;
+	if (I.material.type == MAT_METAL) {
+		// 金属マテリアル
+		vec3 reflected = reflect(I.rayDir, I.normal);
+		ray.origin = I.hitPoint + I.normal * EPS;
+		ray.direction = reflected;
+		albedo = I.material.albedo;
+		return (dot(ray.direction, I.normal) > 0.0);
+	} else {
+		// Lambertian散乱
+		vec3 scatter_direction = I.normal + random_in_unit_vector();
+		ray.origin = I.hitPoint + I.normal * EPS;
+		ray.direction = scatter_direction;
+		albedo = I.material.albedo;
+		return true;
+	}
   }
 
   // ============================================================
@@ -215,14 +230,17 @@
 	sphere[0].radius = 0.5;
 	sphere[0].position = vec3(0.0, -0.5, sin(t));
 	sphere[0].color = vec3(1.0, 1.0, 0.0);
+	sphere[0].material.type = MAT_METAL;
 	sphere[0].material.albedo = sphere[0].color;
 	sphere[1].radius = 1.0;
 	sphere[1].position = vec3(2.0, 0.0, cos(t * 0.666));
 	sphere[1].color = vec3(0.0, 1.0, 0.0);
+	sphere[1].material.type = MAT_METAL;
 	sphere[1].material.albedo = sphere[1].color;
 	sphere[2].radius = 1.5;
 	sphere[2].position = vec3(-2.0, 0.5, cos(t * 0.333));
-	sphere[2].color = vec3(1.0, 0.0, 0.0);
+	sphere[2].color = vec3(0.5137, 0.4941, 0.4941);
+	sphere[2].material.type = MAT_METAL;
 	sphere[2].material.albedo = sphere[2].color;
 
 	// plane init
