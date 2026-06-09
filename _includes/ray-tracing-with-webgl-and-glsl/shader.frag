@@ -130,20 +130,32 @@
 	} else if (I.material.type == MAT_DIELECTRIC) {
 		// 誘電体マテリアル
 		float etai_over_etat;
+		vec3 normal;
 		if (dot(I.rayDir, I.normal) < 0.0) {
 			// 物体の外から入る
 			etai_over_etat = 1.0 / I.material.ref_idx;
-
-			vec3 refracted = refract(normalize(I.rayDir), I.normal, etai_over_etat);
-			ray.origin = I.hitPoint - I.normal * EPS;
-			ray.direction = refracted;
+			normal = I.normal;
 		} else {
 			etai_over_etat = I.material.ref_idx;
-
-			vec3 refracted = refract(normalize(I.rayDir), -I.normal, etai_over_etat);
-			ray.origin = I.hitPoint + I.normal * EPS;
-			ray.direction = refracted;
+			normal = -I.normal;
 		}
+
+		vec3 unit_direction = normalize(I.rayDir);
+		float cos_theta = min(dot(-unit_direction, normal), 1.0);
+		float sin_theta = sqrt(1.0 - cos_theta * cos_theta);
+		if (etai_over_etat * sin_theta > 1.0) {
+			// 全反射
+			vec3 reflected = reflect(I.rayDir, normal);
+			ray.origin = I.hitPoint + normal * EPS;
+			ray.direction = reflected;
+
+			albedo = vec3(1.0);
+			return true;
+		}
+
+		vec3 refracted = refract(normalize(I.rayDir), normal, etai_over_etat);
+		ray.origin = I.hitPoint - normal * EPS;
+		ray.direction = refracted;
 
 		albedo = vec3(1.0);
 		return true;
@@ -275,7 +287,7 @@
 	// sphere[2].position = vec3(-2.0, 0.5, cos(t * 0.333));
 	sphere[2].position = vec3(-2.0, 0.5, 1.0);
 	sphere[2].color = vec3(0.5137, 0.4941, 0.4941);
-	sphere[2].material.type = MAT_METAL;
+	sphere[2].material.type = MAT_DIELECTRIC;
 	sphere[2].material.albedo = sphere[2].color;
 	sphere[2].material.ref_idx = 1.5;
 
