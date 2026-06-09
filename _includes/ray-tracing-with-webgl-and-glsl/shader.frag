@@ -45,6 +45,7 @@
   struct Material{
 	// TODO: マテリアルの種類の情報を持たせる
 	int type;
+	float fuzz;
 	vec3 albedo;
   };
 
@@ -122,7 +123,7 @@
 		// 金属マテリアル
 		vec3 reflected = reflect(I.rayDir, I.normal);
 		ray.origin = I.hitPoint + I.normal * EPS;
-		ray.direction = reflected;
+		ray.direction = reflected + I.material.fuzz * random_in_unit_vector();
 		albedo = I.material.albedo;
 		return (dot(ray.direction, I.normal) > 0.0);
 	} else {
@@ -240,18 +241,22 @@
 	sphere[0].color = vec3(1.0, 1.0, 0.0);
 	sphere[0].material.type = MAT_METAL;
 	sphere[0].material.albedo = sphere[0].color;
+
 	sphere[1].radius = 1.0;
 	// sphere[1].position = vec3(2.0, 0.0, cos(t * 0.666));
 	sphere[1].position = vec3(2.0, 0.0, 0.0);
 	sphere[1].color = vec3(0.0, 1.0, 0.0);
 	sphere[1].material.type = MAT_METAL;
 	sphere[1].material.albedo = sphere[1].color;
+	sphere[1].material.fuzz = 0.3;
+
 	sphere[2].radius = 1.5;
 	// sphere[2].position = vec3(-2.0, 0.5, cos(t * 0.333));
 	sphere[2].position = vec3(-2.0, 0.5, 1.0);
 	sphere[2].color = vec3(0.5137, 0.4941, 0.4941);
 	sphere[2].material.type = MAT_METAL;
 	sphere[2].material.albedo = sphere[2].color;
+	sphere[2].material.fuzz = 1.0;
 
 	// plane init
 	plane.position = vec3(0.0, -1.0, 0.0);
