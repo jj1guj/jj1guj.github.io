@@ -37,16 +37,23 @@
 	vec3 direction;
   };
 
+  struct Material{
+	// TODO: マテリアルの種類の情報を持たせる
+	vec3 albedo;
+  };
+
   struct Sphere{
 	float radius;
 	vec3  position;
 	vec3  color;
+	Material material;
   };
 
   struct Plane{
 	vec3 position;
 	vec3 normal;
 	vec3 color;
+	Material material;
   };
 
   struct Intersection{
@@ -56,6 +63,7 @@
 	vec3 color;    // 交点位置の色
 	float distance;
 	vec3 rayDir;
+	Material material;
   };
 
   Sphere sphere[3];
@@ -97,7 +105,13 @@
   // ============================================================
   // [4] マテリアル散乱関数
   // ============================================================
-  // TODO: Step 2〜6 で実装
+  bool scatter(Intersection I, inout vec3 albedo, inout Ray ray) {
+	vec3 scatter_direction = I.normal + random_in_unit_vector();
+	ray.origin = I.hitPoint + I.normal * EPS;
+	ray.direction = scatter_direction;
+	albedo = I.material.albedo;
+	return true;
+  }
 
   // ============================================================
   // [5] 交差判定関数
@@ -126,6 +140,7 @@
 		I.distance = t;
 		I.hit++;
 		I.rayDir = R.direction;
+		I.material = S.material;
 	}
   }
 
@@ -147,6 +162,7 @@
 		I.distance = t;
 		I.hit++;
 		I.rayDir = R.direction;
+		I.material = P.material;
 	}
   }
 
@@ -168,9 +184,9 @@
 		intersectInit(its);
 		intersectExec(ray, its);
 		if (its.hit > 0) {
-			tempColor *= 0.5;
-			ray.origin = its.hitPoint + its.normal * EPS;
-			ray.direction = its.normal + random_in_unit_vector();
+			vec3 albedo;
+			scatter(its, albedo, ray);
+			tempColor *= albedo;
 		} else {
 			vec3 unit_direction = normalize(ray.direction);
 			float t = 0.5 * (unit_direction.y + 1.0);
@@ -199,17 +215,21 @@
 	sphere[0].radius = 0.5;
 	sphere[0].position = vec3(0.0, -0.5, sin(t));
 	sphere[0].color = vec3(1.0, 1.0, 0.0);
+	sphere[0].material.albedo = sphere[0].color;
 	sphere[1].radius = 1.0;
 	sphere[1].position = vec3(2.0, 0.0, cos(t * 0.666));
 	sphere[1].color = vec3(0.0, 1.0, 0.0);
+	sphere[1].material.albedo = sphere[1].color;
 	sphere[2].radius = 1.5;
 	sphere[2].position = vec3(-2.0, 0.5, cos(t * 0.333));
-	sphere[2].color = vec3(1.0, 1.0, 1.0);
+	sphere[2].color = vec3(1.0, 0.0, 0.0);
+	sphere[2].material.albedo = sphere[2].color;
 
 	// plane init
 	plane.position = vec3(0.0, -1.0, 0.0);
 	plane.normal = vec3(0.0, 1.0, 0.0);
-	plane.color = vec3(1.0);
+	plane.color = vec3(0.5);
+	plane.material.albedo = plane.color;
 
 	vec3 col = ray_color(ray);
 	gl_FragColor = vec4(sqrt(col), 1.0);
