@@ -35,6 +35,8 @@
   const int MAT_METAL = 1;
   const int MAT_DIELECTRIC = 2;
 
+  const int NUM_SPHERES = 3;
+
   // ============================================================
   // [2] 構造体定義
   // ============================================================
@@ -74,7 +76,7 @@
 	Material material;
   };
 
-  Sphere sphere[3];
+  Sphere sphere[NUM_SPHERES];
   Plane plane;
 
   // ============================================================
@@ -239,9 +241,9 @@
   }
 
   void intersectExec(Ray R, inout Intersection I){
-	intersectSphere(R, sphere[0], I);
-	intersectSphere(R, sphere[1], I);
-	intersectSphere(R, sphere[2], I);
+	for (int i = 0; i < NUM_SPHERES; i++) {
+		intersectSphere(R, sphere[i], I);
+	}
 	intersectPlane(R, plane, I);
   }
 
