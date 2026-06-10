@@ -269,7 +269,7 @@
   void main(void){
 
 	// camera paramters init
-	vec3 lookfrom = vec3(13.0, 2.0, 3.0);
+	vec3 lookfrom = vec3(13.0, 0.5, 3.0);
 	vec3 lookat = vec3(0.0);
 	vec3 vup = vec3(0.0, 1.0, 0.0);
 	float vfov = 20.0;
@@ -287,18 +287,18 @@
 
 	// sphere init
 	sphere[0].radius = 1.0;
-	sphere[0].position = vec3(0.0);
+	sphere[0].position = vec3(-2.0, 0.0, 0.0);
 	sphere[0].material.type = MAT_DIELECTRIC;
 	sphere[0].material.albedo = vec3(1.0);
 	sphere[0].material.ref_idx = 1.5;
 
 	sphere[1].radius = 1.0;
-	sphere[1].position = vec3(-3.5, 0.0, 0.0);
+	sphere[1].position = vec3(-7.0, 0.0, 0.0);
 	sphere[1].material.type = MAT_LAMBERTIAN;
 	sphere[1].material.albedo = vec3(0.4, 0.2, 0.1);
 
 	sphere[2].radius = 1.0;
-	sphere[2].position = vec3(3.5, 0.0, 0.0);
+	sphere[2].position = vec3(3.0, 0.0, 0.0);
 	sphere[2].material.type = MAT_METAL;
 	sphere[2].material.albedo = vec3(0.7, 0.6, 0.5);
 
