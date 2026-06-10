@@ -274,8 +274,20 @@
   // [7] main (カメラ設定, シーン構築, 出力)
   // ============================================================
   void main(void){
-	// fragment position
-	vec2 p = (gl_FragCoord.xy * 2.0 - r) / min(r.x, r.y);
+
+	// camera paramters init
+	vec3 lookfrom = vec3(13.0, 2.0, 3.0);
+	vec3 lookat = vec3(0.0);
+	vec3 vup = vec3(0.0, 1.0, 0.0);
+	float vfov = 20.0;
+
+	// カメラの正規直交基底を計算
+	float half_height = tan(vfov * pi / 360.0);
+	float half_width = half_height * (r.x /r.y);
+
+	vec3 w = normalize(lookfrom - lookat);
+	vec3 u = normalize(cross(vup, w));
+	vec3 v = cross(w, u);
 
 	// random seed init
 	randSeed = gl_FragCoord.xy + vec2(t);
@@ -315,10 +327,16 @@
 	plane.color = vec3(0.5);
 	plane.material.albedo = plane.color;
 
+	Ray ray;
+	ray.origin = lookfrom;
 	vec3 col = vec3(0.0);
 	for (int sample = 0; sample < SAMPLES_PER_PIXEL; sample++) {
 		vec2 offset = sample_square() / min(r.x, r.y);
-		ray.direction = normalize(vec3(p + offset, -1.0));
+		vec2 uv = gl_FragCoord.xy / r + offset;
+		ray.direction = normalize(
+			(2.0 * uv.x - 1.0) * half_width * u + 
+			(2.0 * uv.y - 1.0) * half_height * v - w
+		);
 		col += ray_color(ray) / float(SAMPLES_PER_PIXEL);
 	}
 	gl_FragColor = vec4(sqrt(col), 1.0);
