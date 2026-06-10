@@ -212,7 +212,6 @@
 	if(d > 0.0 && t > 0.0 && t < I.distance){
 		I.hitPoint = R.origin + R.direction * t;
 		I.normal = normalize(I.hitPoint - S.position);
-		float d = clamp(dot(normalize(vec3(1.0)), I.normal), 0.1, 1.0);
 		I.distance = t;
 		I.hit++;
 		I.rayDir = R.direction;
@@ -227,13 +226,6 @@
 	if (t > EPS && t < I.distance){
 		I.hitPoint = R.origin + R.direction * t;
 		I.normal = P.normal;
-		float d = clamp(dot(I.normal, LDR), 0.1, 1.0);
-		float m = mod(I.hitPoint.x, 2.0);
-		float n = mod(I.hitPoint.z, 2.0);
-		if ((m > 1.0 && n > 1.0) || (m < 1.0 && n < 1.0)){
-			d *= 0.5;
-		}
-		float f = 1.0 - min(abs(I.hitPoint.z), 25.0) * 0.04;
 		I.distance = t;
 		I.hit++;
 		I.rayDir = R.direction;
