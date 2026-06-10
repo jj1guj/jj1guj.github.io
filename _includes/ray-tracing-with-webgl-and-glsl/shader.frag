@@ -118,6 +118,10 @@
 	return vec2(random() - 0.5, random() - 0.5);
   }
 
+  float scene_random(float seed) {
+	return fract(sin(seed * 78.233) * 43758.5453);
+  }
+
   // ============================================================
   // [4] マテリアル散乱関数
   // ============================================================
@@ -194,7 +198,6 @@
 	I.hit      = 0;
 	I.hitPoint = vec3(0.0);
 	I.normal   = vec3(0.0);
-	I.color    = vec3(0.0);
 	I.distance = 1.0e+30;
 	I.rayDir   = vec3(0.0);
   }
@@ -210,7 +213,6 @@
 		I.hitPoint = R.origin + R.direction * t;
 		I.normal = normalize(I.hitPoint - S.position);
 		float d = clamp(dot(normalize(vec3(1.0)), I.normal), 0.1, 1.0);
-		I.color = S.color * d;
 		I.distance = t;
 		I.hit++;
 		I.rayDir = R.direction;
@@ -232,7 +234,6 @@
 			d *= 0.5;
 		}
 		float f = 1.0 - min(abs(I.hitPoint.z), 25.0) * 0.04;
-		I.color = P.color * d * f;
 		I.distance = t;
 		I.hit++;
 		I.rayDir = R.direction;
@@ -292,40 +293,27 @@
 	// random seed init
 	randSeed = gl_FragCoord.xy + vec2(t);
 
-	// ray init
-	Ray ray;
-	ray.origin = vec3(0.0, 0.0, 5.0);
-	ray.direction = normalize(vec3(p.x, p.y, -1.0));
-
 	// sphere init
-	sphere[0].radius = 0.5;
-	// sphere[0].position = vec3(0.0, -0.5, sin(t));
-	sphere[0].position = vec3(0.0, -0.5, -1.0);
-	sphere[0].color = vec3(1.0, 1.0, 0.0);
-	sphere[0].material.type = MAT_METAL;
-	sphere[0].material.albedo = sphere[0].color;
+	sphere[0].radius = 1.0;
+	sphere[0].position = vec3(0.0);
+	sphere[0].material.type = MAT_DIELECTRIC;
+	sphere[0].material.albedo = vec3(1.0);
+	sphere[0].material.ref_idx = 1.5;
 
 	sphere[1].radius = 1.0;
-	// sphere[1].position = vec3(2.0, 0.0, cos(t * 0.666));
-	sphere[1].position = vec3(2.0, 0.0, 0.0);
-	sphere[1].color = vec3(0.0, 1.0, 0.0);
-	sphere[1].material.type = MAT_METAL;
-	sphere[1].material.albedo = sphere[1].color;
-	sphere[1].material.fuzz = 0.3;
+	sphere[1].position = vec3(-3.5, 0.0, 0.0);
+	sphere[1].material.type = MAT_LAMBERTIAN;
+	sphere[1].material.albedo = vec3(0.4, 0.2, 0.1);
 
-	sphere[2].radius = 1.5;
-	// sphere[2].position = vec3(-2.0, 0.5, cos(t * 0.333));
-	sphere[2].position = vec3(-2.0, 0.5, 1.0);
-	sphere[2].color = vec3(0.5137, 0.4941, 0.4941);
-	sphere[2].material.type = MAT_DIELECTRIC;
-	sphere[2].material.albedo = sphere[2].color;
-	sphere[2].material.ref_idx = 1.5;
+	sphere[2].radius = 1.0;
+	sphere[2].position = vec3(3.5, 0.0, 0.0);
+	sphere[2].material.type = MAT_METAL;
+	sphere[2].material.albedo = vec3(0.7, 0.6, 0.5);
 
 	// plane init
 	plane.position = vec3(0.0, -1.0, 0.0);
 	plane.normal = vec3(0.0, 1.0, 0.0);
-	plane.color = vec3(0.5);
-	plane.material.albedo = plane.color;
+	plane.material.albedo = vec3(0.5);
 
 	Ray ray;
 	ray.origin = lookfrom;
