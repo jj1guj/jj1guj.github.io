@@ -1,8 +1,16 @@
   !(function () {
     function e() {
+      var lastFrame = 0;
+      var frameInterval = 1000 / 30; // TARGET: 30 fps
       function e() {
-        T &&
-          ((p = 0.001 * (Date.now() - C)),
+        if (!T) return;
+        var now = Date.now();
+        if (now - lastFrame < frameInterval) {
+          requestAnimationFrame(e);
+          return;
+        }
+        lastFrame = now;
+        ((p = 0.001 * (now - C)),
           i.useProgram(o),
           i.bindFramebuffer(E, c.f),
           i.bindTexture(R, d.t),
