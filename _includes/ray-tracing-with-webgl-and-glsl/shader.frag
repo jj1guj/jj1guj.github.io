@@ -22,6 +22,7 @@
 
   uniform float t;
   uniform vec2  r;
+  uniform float sceneSeed;
 
   const vec3 LDR = vec3(0.577);
   const float EPS = 1.0e-4;
@@ -35,7 +36,9 @@
   const int MAT_METAL = 1;
   const int MAT_DIELECTRIC = 2;
 
-  const int NUM_SPHERES = 3;
+  const int GRID_COLS = 5;
+  const int GRID_ROWS = 5;
+  const int NUM_SPHERES = 3 + GRID_COLS * GRID_ROWS;
 
   // ============================================================
   // [2] 構造体定義
@@ -118,8 +121,14 @@
 	return vec2(random() - 0.5, random() - 0.5);
   }
 
-  float scene_random(float seed) {
-	return fract(sin(seed * 78.233) * 43758.5453);
+  float scene_seed;
+  float scene_random() {
+	scene_seed += 0.6180339887;
+	return fract(sin(scene_seed * 78.233) * 43758.5453);
+  }
+
+  float scene_random(float min_val, float max_val) {
+	return min_val + (max_val - min_val) * scene_random();
   }
 
   // ============================================================
@@ -286,6 +295,8 @@
 	randSeed = gl_FragCoord.xy + vec2(t);
 
 	// sphere init
+
+	// 大球の設定
 	sphere[0].radius = 1.0;
 	sphere[0].position = vec3(-2.0, 0.0, 0.0);
 	sphere[0].material.type = MAT_DIELECTRIC;
@@ -302,8 +313,42 @@
 	sphere[2].material.type = MAT_METAL;
 	sphere[2].material.albedo = vec3(0.7, 0.6, 0.5);
 
+	// 小球の設定
 	float radius_mini_sphere = 0.2;
 	float y_mini_sphere = -0.8;
+	scene_seed = sceneSeed;
+	float step_a = 22.0 / float(GRID_ROWS);
+	float step_b = 22.0 / float(GRID_COLS);
+	for (int i = 3; i < NUM_SPHERES; i++) {
+		float a = float((i - 3) / GRID_COLS) * step_a - 11.0;
+		float b = mod(float(i - 3), float(GRID_COLS)) * step_b - 11.0;
+		sphere[i].radius = radius_mini_sphere;
+		sphere[i].position = vec3(a + 0.9 * scene_random(), 
+								y_mini_sphere, 
+								b + 0.9 * scene_random());
+		float material_type_rand = scene_random();
+		if (material_type_rand <= 0.8) {
+			sphere[i].material.type = MAT_LAMBERTIAN;
+		} else if (material_type_rand <= 0.95) {
+			sphere[i].material.type = MAT_METAL;
+		} else {
+			sphere[i].material.type = MAT_DIELECTRIC;
+		}
+		sphere[i].material.albedo = vec3(scene_random(), scene_random(), scene_random());
+		if (sphere[i].material.type == MAT_DIELECTRIC) {
+			sphere[i].material.ref_idx = 1.5;
+		} else if (sphere[i].material.type == MAT_METAL) {
+			sphere[i].material.fuzz = scene_random(0.0, 0.1);
+		}
+
+		// 大球との衝突判定
+		for (int j = 0; j < 3; j++) {
+			if (distance(sphere[j].position, sphere[i].position) < sphere[j].radius + sphere[i].radius) {
+				sphere[i].radius = 0.0;
+				break;
+			}
+		}
+	}
 
 
 	// plane init

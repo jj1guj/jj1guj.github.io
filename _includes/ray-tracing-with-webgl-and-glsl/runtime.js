@@ -14,6 +14,7 @@
           i.uniform1f(f.t, p),
           i.uniform2fv(f.r, [I, U]),
           i.uniform1i(f.s, 0),
+          i.uniform1f(f.sceneSeed, f._sceneSeedValue),
           i.drawArrays(5, 0, 4),
           i.useProgram(b),
           i.bindFramebuffer(E, null),
@@ -42,6 +43,7 @@
         (f.t = i.getUniformLocation(o, "t")),
         (f.r = i.getUniformLocation(o, "r")),
         (f.s = i.getUniformLocation(o, "smp")),
+        (f.sceneSeed = i.getUniformLocation(o, "sceneSeed")),
         (x = i.getAttribLocation(o, "p")),
         i.useProgram(b),
         (v = {}),
@@ -51,6 +53,7 @@
         (d = createFB()),
         i.activeTexture(33984),
         i.clearColor(0, 0, 0, 1),
+        (f._sceneSeedValue = Math.random() * 1000.0),
         (C = Date.now()),
         e();
     }
