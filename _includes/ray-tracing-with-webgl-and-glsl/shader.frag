@@ -302,6 +302,10 @@
 	sphere[2].material.type = MAT_METAL;
 	sphere[2].material.albedo = vec3(0.7, 0.6, 0.5);
 
+	float radius_mini_sphere = 0.2;
+	float y_mini_sphere = -0.8;
+
+
 	// plane init
 	plane.position = vec3(0.0, -1.0, 0.0);
 	plane.normal = vec3(0.0, 1.0, 0.0);
