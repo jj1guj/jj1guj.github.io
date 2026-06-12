@@ -26,7 +26,10 @@
 
   const vec3 LDR = vec3(0.577);
   const float EPS = 1.0e-4;
-  const int SAMPLES_PER_PIXEL = 20;
+
+  const int STRAT_COLS = 4;
+  const int STRAT_ROWS = 5;
+  const int SAMPLES_PER_PIXEL = STRAT_COLS * STRAT_ROWS;
   const int MAX_REF = 100;
 
   const float pi = acos(-1.0);
@@ -102,8 +105,12 @@
 	return vec3(r * cos(a), r * sin(a), z);
   }
 
-  vec2 sample_square() {
-	return vec2(random() - 0.5, random() - 0.5);
+  vec2 sample_square(int sample_index) {
+	int row = sample_index / STRAT_COLS;
+	int col = sample_index - row * STRAT_COLS;
+	float cell_x = (float(col) + random()) / float(STRAT_COLS) - 0.5;
+    float cell_y = (float(row) + random()) / float(STRAT_ROWS) - 0.5;
+	return vec2(cell_x, cell_y);
   }
 
   float scene_seed;
@@ -357,7 +364,7 @@
 	ray.origin = lookfrom;
 	vec3 col = vec3(0.0);
 	for (int sample = 0; sample < SAMPLES_PER_PIXEL; sample++) {
-		vec2 offset = sample_square() / min(r.x, r.y);
+		vec2 offset = sample_square(sample) / min(r.x, r.y);
 		vec2 uv = gl_FragCoord.xy / r + offset;
 		ray.direction = normalize(
 			(2.0 * uv.x - 1.0) * half_width * u + 
