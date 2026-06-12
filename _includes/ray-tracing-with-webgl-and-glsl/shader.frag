@@ -39,8 +39,8 @@
   const int MAT_METAL = 1;
   const int MAT_DIELECTRIC = 2;
 
-  const int GRID_COLS = 5;
-  const int GRID_ROWS = 5;
+  const int GRID_COLS = 4;
+  const int GRID_ROWS = 3;
   const int NUM_SPHERES = 3 + GRID_COLS * GRID_ROWS;
 
   // ============================================================
@@ -240,7 +240,7 @@
 	if (R.origin.y > -0.6 && R.direction.y >= 0.0) return false;
 	// 2. バウンディングスフィア: 外側からのレイ用
 	vec3 a = R.origin - vec3(0.0, -0.8, 0.0);
-	float c = dot(a, a) - 169.0; // 13.0^2
+	float c = dot(a, a) - 81.0; // 9.0^2
 	if (c > 0.0) {
 		float b = dot(a, R.direction);
 		float d = b * b - c;
@@ -343,11 +343,11 @@
 	float radius_mini_sphere = 0.2;
 	float y_mini_sphere = -0.8;
 	scene_seed = sceneSeed;
-	float step_a = 22.0 / float(GRID_ROWS);
-	float step_b = 22.0 / float(GRID_COLS);
+	float step_a = 14.0 / float(GRID_ROWS);
+	float step_b = 14.0 / float(GRID_COLS);
 	for (int i = 3; i < NUM_SPHERES; i++) {
-		float a = float((i - 3) / GRID_COLS) * step_a - 11.0;
-		float b = mod(float(i - 3), float(GRID_COLS)) * step_b - 11.0;
+		float a = float((i - 3) / GRID_COLS) * step_a - 7.0;
+		float b = mod(float(i - 3), float(GRID_COLS)) * step_b - 7.0;
 		sphere[i].radius = radius_mini_sphere;
 		sphere[i].position = vec3(a + 0.9 * scene_random(), 
 								y_mini_sphere, 
