@@ -272,9 +272,10 @@
 
 	// camera paramters init
 	float camera_r = 15.0;
-	vec3 lookfrom = vec3(camera_r * cos(2.0 * pi * t / 60.0), 
+	float camera_T = 60.0;
+	vec3 lookfrom = vec3(camera_r * cos(2.0 * pi * t / camera_T), 
 						0.5,
-						camera_r * sin(2.0 * pi * t / 60.0));
+						camera_r * sin(2.0 * pi * t / camera_T));
 	vec3 lookat = vec3(0.0);
 	vec3 vup = vec3(0.0, 1.0, 0.0);
 	float vfov = 20.0;
