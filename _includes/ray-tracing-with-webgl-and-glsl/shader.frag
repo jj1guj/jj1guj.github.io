@@ -27,7 +27,7 @@
   const vec3 LDR = vec3(0.577);
   const float EPS = 1.0e-4;
   const int SAMPLES_PER_PIXEL = 20;
-  const int MAX_REF = 4;
+  const int MAX_REF = 100;
 
   const float pi = acos(-1.0);
 
@@ -257,6 +257,14 @@
 
 	vec3 tempColor = vec3(1.0);
 	for (int i = 0; i < MAX_REF; i++) {
+		if (i > 3) {
+			float p = clamp(max(tempColor.x, max(tempColor.y, tempColor.z)),
+					0.2, 1.0);
+			if (random() >= p) {
+				break;
+			}
+			tempColor /= p;
+		}
 		intersectInit(its);
 		intersectExec(ray, its);
 		if (its.hit > 0) {
