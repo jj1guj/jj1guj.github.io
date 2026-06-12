@@ -58,14 +58,12 @@
   struct Sphere{
 	float radius;
 	vec3  position;
-	vec3  color;
 	Material material;
   };
 
   struct Plane{
 	vec3 position;
 	vec3 normal;
-	vec3 color;
 	Material material;
   };
 
@@ -73,7 +71,6 @@
 	int hit;
 	vec3 hitPoint; // 交点の座標
 	vec3 normal;   // 交点位置の法線
-	vec3 color;    // 交点位置の色
 	float distance;
 	vec3 rayDir;
 	Material material;
