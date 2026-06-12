@@ -95,18 +95,6 @@
 	return min_val + (max_val - min_val) * random();
   }
 
-  vec3 random_vec3() {
-	return vec3(random(), random(), random());
-  }
-
-  vec3 random_vec3(float min_val, float max_val) {
-	return vec3(
-		random(min_val, max_val),
-		random(min_val, max_val),
-		random(min_val, max_val)
-	);
-  }
-
   vec3 random_in_unit_vector() {
 	float a = random(0.0, 2.0 * pi);
 	float z = random(-1.0, 1.0);
