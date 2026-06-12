@@ -234,9 +234,31 @@
 	}
   }
 
+  bool canHitSmallSpheres(Ray R) {
+	// 1. 高さチェック: 小球はy=-1.0〜-0.6にしか存在しない
+	//    origin.y > -0.6 かつ上向きなら、小球に当たりえない
+	if (R.origin.y > -0.6 && R.direction.y >= 0.0) return false;
+	// 2. バウンディングスフィア: 外側からのレイ用
+	vec3 a = R.origin - vec3(0.0, -0.8, 0.0);
+	float c = dot(a, a) - 169.0; // 13.0^2
+	if (c > 0.0) {
+		float b = dot(a, R.direction);
+		float d = b * b - c;
+		if (d <= 0.0 || -b - sqrt(d) <= 0.0) return false;
+	}
+	return true;
+  }
+
   void intersectExec(Ray R, inout Intersection I){
-	for (int i = 0; i < NUM_SPHERES; i++) {
+	// 大球3つは常に判定
+	for (int i = 0; i < 3; i++) {
 		intersectSphere(R, sphere[i], I);
+	}
+	// 小球はバウンディングスフィアに当たる場合のみ判定
+	if (canHitSmallSpheres(R)) {
+		for (int i = 3; i < NUM_SPHERES; i++) {
+			intersectSphere(R, sphere[i], I);
+		}
 	}
 	intersectPlane(R, plane, I);
   }
