@@ -39,8 +39,9 @@
   const int MAT_METAL = 1;
   const int MAT_DIELECTRIC = 2;
 
-  const int GRID_COLS = 4;
-  const int GRID_ROWS = 3;
+  // 小球の数
+  const int GRID_COLS = 0;
+  const int GRID_ROWS = 1;
   const int NUM_SPHERES = 3 + GRID_COLS * GRID_ROWS;
 
   // ============================================================
@@ -343,35 +344,39 @@
 	float radius_mini_sphere = 0.2;
 	float y_mini_sphere = -0.8;
 	scene_seed = sceneSeed;
-	float step_a = 14.0 / float(GRID_ROWS);
-	float step_b = 14.0 / float(GRID_COLS);
-	for (int i = 3; i < NUM_SPHERES; i++) {
-		float a = float((i - 3) / GRID_COLS) * step_a - 7.0;
-		float b = mod(float(i - 3), float(GRID_COLS)) * step_b - 7.0;
-		sphere[i].radius = radius_mini_sphere;
-		sphere[i].position = vec3(a + 0.9 * scene_random(), 
-								y_mini_sphere, 
-								b + 0.9 * scene_random());
-		float material_type_rand = scene_random();
-		if (material_type_rand <= 0.8) {
-			sphere[i].material.type = MAT_LAMBERTIAN;
-		} else if (material_type_rand <= 0.95) {
-			sphere[i].material.type = MAT_METAL;
-		} else {
-			sphere[i].material.type = MAT_DIELECTRIC;
-		}
-		sphere[i].material.albedo = vec3(scene_random(), scene_random(), scene_random());
-		if (sphere[i].material.type == MAT_DIELECTRIC) {
-			sphere[i].material.ref_idx = 1.5;
-		} else if (sphere[i].material.type == MAT_METAL) {
-			sphere[i].material.fuzz = scene_random(0.0, 0.1);
-		}
+	if (GRID_ROWS * GRID_COLS > 0) {
+		int grid_rows = GRID_ROWS;
+		int grid_cols = GRID_COLS;
+		float step_a = 14.0 / float(grid_rows);
+		float step_b = 14.0 / float(grid_cols);
+		for (int i = 3; i < NUM_SPHERES; i++) {
+			float a = float((i - 3) / grid_cols) * step_a - 7.0;
+			float b = mod(float(i - 3), float(grid_cols)) * step_b - 7.0;
+			sphere[i].radius = radius_mini_sphere;
+			sphere[i].position = vec3(a + 0.9 * scene_random(), 
+									y_mini_sphere, 
+									b + 0.9 * scene_random());
+			float material_type_rand = scene_random();
+			if (material_type_rand <= 0.8) {
+				sphere[i].material.type = MAT_LAMBERTIAN;
+			} else if (material_type_rand <= 0.95) {
+				sphere[i].material.type = MAT_METAL;
+			} else {
+				sphere[i].material.type = MAT_DIELECTRIC;
+			}
+			sphere[i].material.albedo = vec3(scene_random(), scene_random(), scene_random());
+			if (sphere[i].material.type == MAT_DIELECTRIC) {
+				sphere[i].material.ref_idx = 1.5;
+			} else if (sphere[i].material.type == MAT_METAL) {
+				sphere[i].material.fuzz = scene_random(0.0, 0.1);
+			}
 
-		// 大球との衝突判定
-		for (int j = 0; j < 3; j++) {
-			if (distance(sphere[j].position, sphere[i].position) < sphere[j].radius + sphere[i].radius) {
-				sphere[i].radius = 0.0;
-				break;
+			// 大球との衝突判定
+			for (int j = 0; j < 3; j++) {
+				if (distance(sphere[j].position, sphere[i].position) < sphere[j].radius + sphere[i].radius) {
+					sphere[i].radius = 0.0;
+					break;
+				}
 			}
 		}
 	}
